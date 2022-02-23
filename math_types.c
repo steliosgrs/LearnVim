@@ -1,4 +1,7 @@
 // compile gcc math_types -o math_types -lm
+// Generate N random numbers and print them
+// Then find the average of these numbers 
+// and the Standar Deviation
 #include <math.h>
 #include <stdlib.h>
 #include <stdio.h>
@@ -7,7 +10,7 @@ typedef int numType;
 Number randNum(){
 	return 1.0*rand()/RAND_MAX;
 }
-main(int argc , char *argv[]){
+int main(int argc , char *argv[]){
 	int i, N = atoi(argv[1]);
 	float m1 = 0.0, m2 = 0.0;
 	Number x;
