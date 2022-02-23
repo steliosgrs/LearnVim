@@ -27,13 +27,11 @@ int isArmstrong(int n){
 }
 int main(int argc, char *argv[]){
 	// Check if number is Armstrong
-	int i = 0 , N = atoi(argv[1]);
+	int i , N = atoi(argv[1]);
     
 	printf("Found %d digits in %d\n",getDigits(N),N);
-	
-    if (isArmstrong(N)==1){
-		printf("The number %d is an Armstrong number\n",N);
-	}else 
-		printf("The number %d is NOT an Armstrong number\n",N);
-
+	for(i=1; i <= N; i++){
+        if(isArmstrong(i))
+            printf("%d is an Armstrong number\n",i);
+    }
 }
